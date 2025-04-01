@@ -11,11 +11,11 @@ A simple Python-based expense tracker to manage personal finances.
 2. Select options from the menu to interact with the tracker.
 
 ## Testing
+- The project includes a `test_expense_tracker.py` file with unit tests for the main functionality.
+- To run the tests, use the command: `python -m unittest test_expense_tracker.py`.
 
-This project includes a set of automated tests located in the `test_expense_tracker.py` file. The tests ensure the core functionality of the tracker works as expected.
+## License
+This project is licensed under the MIT License. See the `LICENSE` file for more details.
 
-### Running the Tests
-To run the tests, navigate to the project directory and execute:
-
-```bash
-python -m unittest test_expense_tracker.py
+## License File
+- The `LICENSE` file contains the MIT License for this project, which grants permission to use, modify, and distribute the code.
