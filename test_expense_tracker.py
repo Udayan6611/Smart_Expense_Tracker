@@ -1,5 +1,6 @@
 import unittest
 import json
+from unittest.mock import patch
 from expense_tracker import Transaction
 
 class TestExpenseTracker(unittest.TestCase):
@@ -34,6 +35,13 @@ class TestExpenseTracker(unittest.TestCase):
         self.assertEqual(data[0]["category"], "Food")
 
     def test_summary(self):
+        """Test expense summary"""
+        summary = Transaction.show_summary()
+        self.assertIn("Food", summary)
+        self.assertIn("Transport", summary)
+
+    @patch('matplotlib.pyplot.show')
+    def test_summary(self, mock_show):
         """Test expense summary"""
         summary = Transaction.show_summary()
         self.assertIn("Food", summary)
